@@ -1,7 +1,9 @@
 import Head from "next/head";
-import Hero from "../components/hero.components";
+import Hero from "../components/Hero.component";
 import fsPromises from "fs/promises";
 import path from "path";
+import GitArticles from "../components/GitArticles.component";
+import Navbar from "../components/Navbar.component";
 
 export default function Home(props) {
   const posts = props.record;
@@ -20,17 +22,10 @@ export default function Home(props) {
       </Head>
 
       <Hero />
-      <div>
-        {posts.map((post) => (
-          <div
-            key={post.title}
-            style={{ padding: 20, borderBottom: "1px solid #ccc" }}
-          >
-            <h2>{post.title}</h2>
-            <p>{post.description}</p>
-          </div>
-        ))}
-      </div>
+      <Navbar />
+      <main>
+      <GitArticles articles={posts}/>
+      </main>
     </div>
   );
 }
