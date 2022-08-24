@@ -140,3 +140,12 @@ footer {
     overflow-y: auto;
   }
 }
+/* *********************** */
+.article {
+  padding-top: 50;
+  border-bottom: "1px solid #ccc";
+}
+.hr-white {
+  color: white;
+  background-color: #fff;
+}
